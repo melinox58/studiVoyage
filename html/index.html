@@ -11,8 +11,8 @@
 
 
 <body>
-    <header>
 
+    <header>
 <!-- Navbar -->
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -35,28 +35,41 @@
                     <a class="nav-link" href="#">Nos idées voyage</a>
                   </li>
                 </ul>
-                  <button class="btn btn-success" type="submit">Connexion</button>
+                  <!-- Button trigger modal -->
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Connexion
+                </button>
               </div>
             </div>
         </nav>
 <!-- Fin navbar-->
 
 <!-- Landing page-->
-        <img class="landing-page img-fluid" src="assets/Images/DALL·E 2024-07-17 17.38.08 - heavenly landscape, blue sea and black sand.png" alt="Carte du monde">
-            <h1>VOUS EMMENER <br> PLUS LOIN !</h1>
+        <img class="landing-page img-fluid" src="assets/Images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg">
+            <div><h1>VOUS EMMENER <br> PLUS LOIN !</h1></div>
 
 <!-- Barres de recherches-->
-            <div class="input-group flex-nowrap">
-                <span class="input-group-text" id="addon-wrapping">Destination</span>
-                <input type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">Départ</span>
-                <input type="text" class="form-control" placeholder="Départ" aria-label="Départ" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">Arrivée</span>
-                <input type="text" class="form-control" placeholder="Arrivée" aria-label="Arrivée" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">Durée</span>
-                <input type="text" class="form-control" placeholder="Durée" aria-label="Durée" aria-describedby="addon-wrapping">
-                <span class="input-group-text" id="addon-wrapping">Date</span>
-                <input type="text" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="addon-wrapping">
+            <div class="input-group">
+                <div>
+                    <label class="input-text" for="Destination"></label>
+                    <input type="text" class="form-control" placeholder="Destination" aria-label="Destination" aria-describedby="addon-wrapping">
+                </div>
+                <div>
+                    <label class="input-text" for="Départ"></label>
+                    <input type="text" class="form-control" placeholder="Départ" aria-label="Départ" aria-describedby="addon-wrapping">
+                </div>
+                <div>
+                    <label class="input-text" for="Arrivée"></label>
+                    <input type="text" class="form-control" placeholder="Arrivée" aria-label="Arrivée" aria-describedby="addon-wrapping">
+                </div>
+                <div>
+                    <label class="input-text" for="Durée"></label>
+                    <input type="text" class="form-control" placeholder="Durée" aria-label="Durée" aria-describedby="addon-wrapping">
+                </div>
+                <div>
+                    <label class="input-text" for="Date"></label>
+                    <input type="date" class="form-control" placeholder="Date" aria-label="Date" aria-describedby="addon-wrapping">
+                </div>
             </div>
             <div class="link">
                 <h2>Séjours</h2>
@@ -73,13 +86,47 @@
 
     <main>
 
+        <!-- Modal-->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fs-5" id="exampleModalLabel">Inscription / Connection</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="connexion">
+                        <p>Connexion</p>
+                        <input type="email" placeholder="Email"><br>
+                        <input type="password" placeholder="Mot de passe"><br>
+                        <input class="btn btn-success" type="submit" value="Connexion"><br>
+                        <a href="#">Mot de passe oublié</a>
+                    </form>
+                    <form class="inscription">
+                        <p>Inscription</p>
+                        <input type="name" placeholder="Nom"><br>
+                        <input type="lastname" placeholder="Prénom"><br>
+                        <input type="adress" placeholder="Adresse"><br>
+                        <input type="email" placeholder="Email"><br>
+                        <input type="password" placeholder="Mot de passe"><br>
+                        <input type="password" placeholder="Confirmation mot de passe"><br>
+                        <input class="btn btn-success" type="submit" value="Inscription"><br>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
         <h3>Les imbattables du moment</h3>
 
 <!-- card image-->
         <div class="card shadow p-3 mb-5 bg-body-tertiary rounded" style="width: 18rem;">
-            <img src="assets/Images/pexels-jeremy-bishop-1260133-2765869.jpg" class="card-img-top" alt="Les iles">
+            <figure><img src="assets/Images/pexels-jeremy-bishop-1260133-2765869.jpg" class="card-img-top" alt="Les iles"></figure>
             <div class="card-body">
-            <h5 class="card-title">Club Jumbo Le Petit Palais & Spa ***</h5>
+                <h5 class="card-title">Club Jumbo Le Petit Palais & Spa ***</h5>
                 <p class="card-text">
                     Tunisie , Djerba <br>
                     Club Jumbo Le Petit Palais & Spa *** <br>
@@ -87,7 +134,7 @@
                     8 jours 7 nuits <br>
                 </p>
                 <div class="prix"><p>699 €</p></div>
-            <a href="#" class="btn btn-primary">Découvrir</a>
+                <a href="#" class="btn btn-primary">Découvrir</a>
             </div>
         </div>
 
@@ -95,13 +142,13 @@
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="assets/Images/slide1.png" class="d-block w-100" alt="...">
+                    <img src="assets/Images/claudio-poggio-PLiX7iIkbYg-unsplash.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/Images/slide2.png" class="d-block w-100" alt="...">
+                    <img src="assets/Images/chor-tsang-07mSKrzKiRw-unsplash.jpg" class="d-block w-100" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="assets/Images/DSCF0939.JPG" class="d-block w-100" alt="...">
+                    <img src="assets/Images/todd-desantis-tszmwrc8sJI-unsplash.jpg" class="d-block w-100" alt="...">
                 </div>
             </div>
 
@@ -123,7 +170,26 @@
     </main>
 
     <footer>
-
+            <div class="col">
+                <a href="text" src="contact.html">Formulaire de contact</a>
+                <a href="text" src="">FAQ</a>
+                <a href="text" src="">Service client</a>
+            </div>
+            <div class="col-center">
+                <p>Retrouvez nous !</p>
+                <div>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-linkedin"></i>
+                </div>
+            </div>
+                <div class="col">
+                    <a href="text" src="">Mentions légales</a>
+                    <a href="text" src="">RGPD</a>
+                    <a href="text" src="">Siège social</a>
+                </div>
+        
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
